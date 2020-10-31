@@ -1,0 +1,141 @@
+html {
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #c80000;
+}
+
+#heading {
+    color: #c80000;
+    background-color: black;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.goomba {
+    margin-top: 200px;
+}
+
+.baddieTitle {
+    font-size: 27px;
+}
+
+.marioPic {
+    color: white;
+}
+
+.baddiePics {
+    margin-top: 200px;
+}
+
+.coin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.worth {
+    margin-bottom: 0;
+}
+
+.inputC {
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+#button1 {
+    background-color: white;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.coins {
+    margin-bottom: 100px;
+    margin-top: 5px;
+}
+
+.footer {
+    font-size: 13px;
+    font: white;
+}
+
+@media only screen and (min-width: 600px) {
+
+html {
+    font-size: 20px;
+}
+
+#heading {
+    font-size: 55px;
+}
+
+.mario {
+    width: 700px; 
+}
+
+.marioPic {
+    font-size: 18px;
+}
+
+.baddieTitle {
+    font-size: 35px;
+}
+
+.footer {
+    font-size: 15px;
+}
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+html {
+    font-size: 30px;
+}
+
+#heading {
+    font-size: 90px;
+}
+
+.mario {
+    width: 1024px;
+}
+
+.marioPic {
+    font-size: 30px;
+}
+
+.baddieTitle {
+    font-size: 50px;
+    margin-top: 400px;
+}
+
+.baddie1 {
+    width: 500px;
+}
+
+.baddie {
+    width: 600px;
+}
+
+.coin {
+    width: 250px;
+}
+
+.inputC {
+    font-size: 25px;
+}
+
+#button1 {
+    background-color: white;
+    font-size: 40px;
+    border-radius: 5px;
+}
+
+
+.footer {
+    font-size: 25px;
+}
+
+}

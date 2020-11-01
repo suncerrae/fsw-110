@@ -2,78 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="authors" content="Crystal Mullins, Kelly Compton, Benjamin Ortiz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="mario_pest_control.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>MARIO PEST CONTROL</title>
+    <title>Mario Pest Control</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="heading">MARIO PEST CONTROL</h1>
-    </header>
-    <div class="marioPic">
-        <img class="mario" src="https://www.allcitycanvas.com/wp-content/uploads/2019/03/Last-Su%CC%81per-Mario-Bros-HORIZONTAL.jpg" width="350px">
-        <p>Please enter the amount of baddies caught in the sections below and press submit to collect your coins.</p>
-    </div>
-    <form id="form1">
-        <div class="goomba">
-            <h3 class="baddieTitle">GOOMBA</h3>
-            <br>
-            <img class="baddie1" src="https://vignette.wikia.nocookie.net/villains/images/4/40/GOOMBAHD.png/revision/latest?cb=20180516220502" width="300px">
+    <div class="container">
+        <div class="header">
+            <h1>Mario's Pest Control</h1>
         </div>
-        <br>
-        <p class="worth">Value = 5 Coins</p>
-        <img class="coin" src="https://thumbs.gfycat.com/NauticalMixedGoldfish-size_restricted.gif" width="150px">
-        <br>
-        <label class="label111" for="goomba">Enter Goombas: </label>
-        <input class="inputC" type="number" id="input1" name="goomba" placeholder="Enter Number Here">
-        <div class="baddiePics">
-            <h3 class="baddieTitle">BOB-OMB</h3>
+        <div class="body">
+            <ul class="baddie-list">
+                <li class="goomba">
+                    <img src="https://play.nintendo.com/images/Masthead_Goomba.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png" alt="Goomba">
+                    <span>Goomba</span>
+                    <span>5 Coins/Each</span>
+                    <input
+                        id="goomba-input"
+                        type="number"
+                        placeholder="# Goombas Caught"
+                    />
+                    <span id="goomba-total"></span>
+                </li>
+                <li class="bob-ombs">
+                    <img src="https://www.nicepng.com/png/full/218-2185184_bob-omb-walk-super-mario-bob-ombs.png">
+                    <span>Bob-ombs</span>
+                    <span>7 Coins/Each</span>
+                    <input
+                        id="bob-ombs-input"
+                        type="number"
+                        placeholder="# Bob-ombs Caught"
+                    />
+                    <span id="bob-ombs-total"></span>
+                </li>
+                <li class="cheep-cheeps">
+                    <img src="https://www.mariowiki.com/images/thumb/6/63/CheepCheepNSMBU.png/300px-CheepCheepNSMBU.png" alt="Cheep-cheeps">
+                    <span>Cheep-cheeps</span>
+                    <span>11 Coins/Each</span>
+                    <input
+                        id="cheep-cheeps-input"
+                        type="number"
+                        placeholder="# Cheep-cheeps Caught"
+                    />
+                    <span id="cheep-cheeps-total"></span> 
+                </li>
+            </ul>
+            <div class="btns">
+                <button class="btn totals-btn" onclick="handleBaddiesBill()">Calculate Total Bill</button>
+                <button class="btn" id="clear-btn">Clear All</button>
+            </div>
             <br>
-            <img class="baddie" src="https://vignette.wikia.nocookie.net/nintendo/images/8/86/Bob-omb_%28MKWii%29.png/revision/latest?cb=20120819225302&path-prefix=en" width="350px">
+            <hr>
+            <h3>Baddies Bill Total - <span id="bill-total"></span></h3>
+            <hr>
+            <div class="breakdown"><b>Breakdown - </b>
+                <br>
+                <br>
+                <div id="goomba-breakdown"></div>
+                <br>
+                <div id="bobombs-breakdown"></div>
+                <br>
+                <div id="cheepCheep-breakdown"></div>
+            </div>
         </div>
-        <br>
-        <p class="worth">Value = 7 Coins</p>
-        <img class="coin" src="https://thumbs.gfycat.com/NauticalMixedGoldfish-size_restricted.gif" width="150px">
-        <br>
-        <label class="label11" for="bobomb">Enter Bob-ombs:</label>
-        <input class="inputC" type="number" id="input2" name="bobomb" placeholder="Enter Number Here">
-        <div class="baddiePics">
-            <h3 class="baddieTitle">CHEEP-CHEEP</h3>
-            <br>
-            <img class="baddie" src="https://vignette.wikia.nocookie.net/nintendo/images/e/e3/Cheep_Cheep.png/revision/latest?cb=20150705215213&path-prefix=en" width="350px">
+        <div class="footer">
+            <div class="email">mario@nintendo.com</div>
+            <div class="website"><a href="https://mario.nintendo.com">Mario's Website</a></div>
+            <div class="address">50 west street, New York,NY 10002 </div>
+            </div>
         </div>
-        <br>
-        <p class="worth">Value = 11 Coins</p>
-        <img class="coin" src="https://thumbs.gfycat.com/NauticalMixedGoldfish-size_restricted.gif" width="150px">
-        <br>
-        <label class="label1" for="goomba">Enter Cheep-cheeps:</label>
-        <input class="inputC" type="number" id="input3" name="cheepCheep" placeholder="Enter Number Here">
-        <br><br><br>
-        <button id="button1" type="submit">Collect Coins</button>
-        <br><br>
-        <div id="total1"></div>
-    </form>
-    <div class="coins">
-        <img class="mario" src="https://media.giphy.com/media/2ZYKKfCr0rkvvTkdum/giphy.gif" width="350px">
     </div>
-    <div>
-        <p>Great Job Mario! Princess Peach is very happy with your work! Job well done.</p>
-    </div>
-    <br><br>
-    <div>
-        <img class="mario" src="https://i.gifer.com/12EX.gif" width="350px">
-    </div>
-    <footer class="footer">
-        <h4>It's a me, Mario!</h4>
-        <p>Email: mariosuperbro@gsnail.com</p>
-        <p>Website: mariopestcontrol.com</p>
-        <p>Address: 777 Super Bros Lane, Mushroom Kingdom, VG 10707
-        </p>
-    </footer>
-    <script src="mario_pest_control.js"></script>
-
+    <script src="index.js"></script>
 </body>
 </html>

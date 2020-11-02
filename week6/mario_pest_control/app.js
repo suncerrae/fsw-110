@@ -1,12 +1,13 @@
 
-function handleBaddiesBill() {
+function handleBaddiesBill() { 
+    console.log ("hello world")
     const coinPerBaddie = {
         goomba: 5,
         bobOmbs: 7,
         cheepCheeps: 11
     }
     let goombaTotal = document.getElementById("goomba-input").value > 0 
-        document.getElementById("goomba-input").value : 0
+        document.getElementById("goomba-input").value = 0
          let bobombsTotal = document.getElementById("bob-ombs-input").value > 0 ? 
         document.getElementById("bob-ombs-input").value : 0
     let cheepCheepsTotal = document.getElementById("cheep-cheeps-input").value > 0 ? 
